@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+.wp-block-post-it-post-it {
+  background: linear-gradient(#F9EFAF, #F7E98D);
+  box-shadow:0 4px 6px rgba(0,0,0,0.1);
+  padding: 25px;
+  transition: all ease 333ms;
+  font-family: 'Covered By Your Grace', cursive !important;
+  font-size: 25px !important;
+  border-radius: 3px;
+  max-width: 300px;
+  min-height: 200px;
+  vertical-align: middle;
+  margin: 0 auto;
+}
+
+.wp-block-post-it-post-it:hover {
+  box-shadow:0 8px 12px rgba(0,0,0,0.1);
+  transform: rotate(1deg);
+  transform: scale(1.01) rotate(1deg);
+}

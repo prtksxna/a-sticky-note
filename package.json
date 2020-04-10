@@ -1,0 +1,16 @@
+{
+  "name": "post-it",
+  "version": "1.0.0",
+  "description": "Post it notes for WordPress",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "wp-scripts start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "wp-scripts build"
+  },
+  "author": "prtksxna",
+  "license": "GPL-2.0-only",
+  "devDependencies": {
+    "@wordpress/scripts": "7.2.0"
+  }
+}
