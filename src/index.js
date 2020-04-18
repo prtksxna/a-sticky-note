@@ -41,7 +41,7 @@ registerBlockType( 'sticky-note/sticky-note', {
 	},
 	example: {
 		attributes: {
-			content: 'Holllo',
+			content: 'Hello',
 			alignment: 'center',
 		},
 	},

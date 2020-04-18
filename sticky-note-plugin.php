@@ -1,6 +1,15 @@
 <?php
-/*
-Plugin Name: Sticky Note
+/**
+ * Plugin Name: A Sticky Note
+ * Plugin URI: https://github.com/prtksxna/a-sticky-note
+ * Description: Gutenberg block to add sticky notes to your blog posts.
+ * Version: 1.0.0
+ * Requires at least: 5.2
+ * Requires PHP: 7.2
+ * Author: Prateek Saxena
+ * Author URI: https://prtksxna.com
+ * License: GPL v2
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
 
 function sticky_note_block() {
