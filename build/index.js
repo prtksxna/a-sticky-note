@@ -106,8 +106,8 @@ __webpack_require__.r(__webpack_exports__);
 /* eslint no-unused-vars: 0 */
 
 
-Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('post-it/post-it', {
-  title: 'Post it',
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('sticky-note/sticky-note', {
+  title: 'Sticky note',
   icon: 'pressthis',
   category: 'layout',
   styles: [{
@@ -179,7 +179,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('pos
   },
   save: function save(props) {
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"].Content, {
-      className: "post-it-".concat(props.attributes.alignment),
+      className: "sticky-note-".concat(props.attributes.alignment),
       tagName: "p",
       value: props.attributes.content
     });

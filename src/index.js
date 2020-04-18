@@ -6,8 +6,8 @@ import {
 	BlockControls,
 } from '@wordpress/block-editor';
 
-registerBlockType( 'post-it/post-it', {
-	title: 'Post it',
+registerBlockType( 'sticky-note/sticky-note', {
+	title: 'Sticky note',
 	icon: 'pressthis',
 	category: 'layout',
 	styles: [
@@ -85,7 +85,7 @@ registerBlockType( 'post-it/post-it', {
 	save: ( props ) => {
 		return (
 			<RichText.Content
-				className={ `post-it-${ props.attributes.alignment }` }
+				className={ `sticky-note-${ props.attributes.alignment }` }
 				tagName="p"
 				value={ props.attributes.content }
 			/>

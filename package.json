@@ -1,7 +1,7 @@
 {
-  "name": "post-it",
+  "name": "sticky-note",
   "version": "1.0.0",
-  "description": "Post it notes for WordPress",
+  "description": "Sticky notes for WordPress",
   "main": "build/index.js",
   "scripts": {
     "start": "wp-scripts start",

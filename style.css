@@ -1,7 +1,7 @@
 /* TODO: https://codepen.io/tr/pen/VLmGoM
 https://fonts.google.com/specimen/Shadows+Into+Light+Two?category=Handwriting&selection.family=Permanent+Marker*/
 
-.wp-block-post-it-post-it {
+.wp-block-sticky-note-sticky-note {
   background: linear-gradient(#F9EFAF, #F7E98D);
   box-shadow:0 4px 6px rgba(0,0,0,0.1);
   padding: 25px;
@@ -15,7 +15,7 @@ https://fonts.google.com/specimen/Shadows+Into+Light+Two?category=Handwriting&se
   margin: 0 auto !important;
 }
 
-.wp-block-post-it-post-it:hover {
+.wp-block-sticky-note-sticky-note:hover {
   box-shadow:0 8px 12px rgba(0,0,0,0.1);
   transform: rotate(1deg);
   transform: scale(1.01) rotate(1deg);
