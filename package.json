@@ -5,7 +5,7 @@
   "main": "build/index.js",
   "scripts": {
     "start": "wp-scripts start",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "eslint src/*.js",
     "build": "wp-scripts build"
   },
   "author": "prtksxna",
