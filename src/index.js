@@ -7,7 +7,7 @@ import {
 
 registerBlockType( 'post-it/post-it', {
     title: 'Post it',
-    icon: 'smiley',
+    icon: 'pressthis',
     category: 'layout',
     styles: [
       {
@@ -15,7 +15,10 @@ registerBlockType( 'post-it/post-it', {
         label: 'Paper', // TODO: What to do here? Use _x
         isDefault: true,
       },
-      { name: 'flat', label: 'Flat' },
+      {
+        name: 'flat',
+        label: 'Flat'
+      },
     ],
     supports: {
       align: true,

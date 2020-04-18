@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+/* TODO: https://codepen.io/tr/pen/VLmGoM
+https://fonts.google.com/specimen/Shadows+Into+Light+Two?category=Handwriting&selection.family=Permanent+Marker*/
 
 .wp-block-post-it-post-it {
   background: linear-gradient(#F9EFAF, #F7E98D);
@@ -11,7 +12,7 @@
   max-width: 300px;
   min-height: 200px;
   vertical-align: middle;
-  margin: 0 auto;
+  margin: 0 auto !important;
 }
 
 .wp-block-post-it-post-it:hover {

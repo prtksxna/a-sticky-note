@@ -106,7 +106,7 @@ __webpack_require__.r(__webpack_exports__);
 
 Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('post-it/post-it', {
   title: 'Post it',
-  icon: 'smiley',
+  icon: 'pressthis',
   category: 'layout',
   styles: [{
     name: 'paper',
