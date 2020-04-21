@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256px" height="256px" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#F9EFAF" offset="0%"></stop>
+            <stop stop-color="#FFEC6D" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="87.3307292%" y1="50%" x2="9.73524306%" y2="50%" id="linearGradient-2">
+            <stop stop-color="#24CAAC" offset="0%"></stop>
+            <stop stop-color="#109974" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="31.5511136%" x2="0%" y2="31.5511136%" id="linearGradient-3">
+            <stop stop-color="#D6D6D6" offset="0%"></stop>
+            <stop stop-color="#ACACAC" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M108.245454,10 L147.754546,10 C180.428494,10 193.385871,13.6201988 206.096982,20.4181754 C218.808094,27.2161521 228.783848,37.1919065 235.581825,49.9030176 C242.379801,62.6141287 246,75.5715057 246,108.245454 L246,147.754546 C246,180.428494 242.379801,193.385871 235.581825,206.096982 C228.783848,218.808094 218.808094,228.783848 206.096982,235.581825 C193.385871,242.379801 180.428494,246 147.754546,246 L108.245454,246 C75.5715057,246 62.6141287,242.379801 49.9030176,235.581825 C37.1919065,228.783848 27.2161521,218.808094 20.4181754,206.096982 C13.6201988,193.385871 10,180.428494 10,147.754546 L10,108.245454 C10,75.5715057 13.6201988,62.6141287 20.4181754,49.9030176 C27.2161521,37.1919065 37.1919065,27.2161521 49.9030176,20.4181754 C62.6141287,13.6201988 75.5715057,10 108.245454,10 Z" id="Rectangle" fill="url(#linearGradient-1)"></path>
+        <g id="push" transform="translate(83.000000, 43.000000)">
+            <polygon id="Path-Copy" fill="url(#linearGradient-2)" points="0 95 12.523717 81.0807713 22.5577372 11.1521063 12.523717 0 77.476283 0 67.4422628 11.1521063 77.476283 81.0807713 90 95"></polygon>
+            <polygon id="Path" fill="#000000" opacity="0.0456891741" points="78 0 67.9586521 11.1521063 68.0796945 12 22.9189384 12 23.0413479 11.1521063 13 0"></polygon>
+            <polygon id="Path" fill="#FFFFFF" opacity="0.110374814" points="77.4639 81 77.476283 81.0807713 90 95 0 95 12.523717 81.0807713 12.5352 81"></polygon>
+        </g>
+        <polygon id="Path" fill="url(#linearGradient-3)" points="135 138 128.07572 220.03 128.075979 221.835938 127.999555 220.933 127.924021 221.835938 127.923391 220.03 121 138"></polygon>
+    </g>
+</svg>
