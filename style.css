@@ -1,12 +1,9 @@
-/* TODO: https://codepen.io/tr/pen/VLmGoM
-https://fonts.google.com/specimen/Shadows+Into+Light+Two?category=Handwriting&selection.family=Permanent+Marker*/
-
 .wp-block-sticky-note-sticky-note {
   background: linear-gradient(#F9EFAF, #F7E98D);
   box-shadow:0 4px 6px rgba(0,0,0,0.1);
   padding: 25px;
   transition: all ease 333ms;
-  font-family: 'Covered By Your Grace', cursive !important;
+  font-family: 'Shadows Into Light Two', cursive !important;
   font-size: 25px !important;
   border-radius: 3px;
   max-width: 300px;

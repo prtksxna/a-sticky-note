@@ -36,7 +36,7 @@ function sticky_note_block() {
     filemtime( plugin_dir_path( __FILE__ ) . 'style.css' )
   );
 
-  wp_enqueue_style( 'sticky-note-google-fonts', 'https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap', false );
+  wp_enqueue_style( 'sticky-note-google-fonts', 'https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap', false );
 
   register_block_type( 'sticky-note/sticky-note', array(
     'style' => 'sticky-note-style',
@@ -47,6 +47,6 @@ function sticky_note_block() {
 add_action( 'init', 'sticky_note_block' );
 
 function sticky_note_styles() {
-  wp_enqueue_style( 'sticky-note-google-fonts', 'https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap', false );
+  wp_enqueue_style( 'sticky-note-google-fonts', 'https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap', false );
 }
 add_action( 'wp_enqueue_scripts', 'sticky_note_styles');
