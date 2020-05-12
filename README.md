@@ -1,7 +1,8 @@
 # A Sticky Note
 
-![Node.js CI](https://github.com/prtksxna/a-sticky-note/workflows/Node.js%20CI/badge.svg)
 ![Deploy to WordPress.org](https://github.com/prtksxna/a-sticky-note/workflows/Deploy%20to%20WordPress.org/badge.svg)
+![Node.js CI](https://github.com/prtksxna/a-sticky-note/workflows/Node.js%20CI/badge.svg)
+![PHP Composer](https://github.com/prtksxna/a-sticky-note/workflows/PHP%20Composer/badge.svg)
 
 ![Screenshot of a sticky note plugin](https://raw.githubusercontent.com/prtksxna/a-sticky-note/master/.wordpress-org/screenshot-2.png)
 
