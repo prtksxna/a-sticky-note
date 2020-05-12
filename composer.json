@@ -1,7 +1,8 @@
 {
     "name": "prtksxna/a-sticky-note",
     "type": "project",
-    "license": "GPL2",
+    "description": "WordPress plugin to create sticky notes",
+    "license": "GPL-2.0-or-later",
     "authors": [
         {
             "name": "Prateek Saxena",
