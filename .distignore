@@ -11,7 +11,7 @@ package.json
 package-lock.json
 composer.json
 composer.lock
-phpcs.xml
+phpcs.xml.dist
 .distignore
 .gitignore
 .DS_Store
