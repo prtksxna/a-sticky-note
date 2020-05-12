@@ -4,6 +4,7 @@
 /node_modules
 /vendor
 .eslintrc.json
+.stylelintrc.json
 readme.md
 README.md
 package.json
