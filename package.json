@@ -6,7 +6,8 @@
   "scripts": {
     "start": "wp-scripts start",
     "stylelint": "stylelint **/*.css",
-    "test": "eslint src/*.js",
+    "eslint": "eslint src/*.js",
+    "test": "npm run stylelint && npm run eslint",
     "build": "wp-scripts build"
   },
   "author": "prtksxna",
