@@ -22,6 +22,10 @@
 
 	<!-- Include the WordPress-Extra standard. -->
 	<rule ref="WordPress-Extra">
+		<exclude name="Generic.WhiteSpace.ScopeIndent.Incorrect"/>
+		<exclude name="Generic.WhiteSpace.DisallowSpaceIndent.SpacesUsed"/>
+		<exclude name="WordPress.WhiteSpace.PrecisionAlignment.Found"/>
+		<exclude name="PEAR.Functions.FunctionCallSignature.SpaceBeforeCloseBracketPrecisionAlignment.Found"/>
 		<!--
 		We may want a middle ground though. The best way to do this is add the
 		entire ruleset, then rule by rule, remove ones that don't suit a project.
@@ -38,6 +42,12 @@
 		<exclude name="WordPress.Security.EscapeOutput"/>
 		-->
 	</rule>
+
+<rule ref="PEAR.Functions.FunctionCallSignature">
+  <properties>
+    <property name="indent" value="2"/>
+  </properties>
+</rule>
 
 	<!-- Let's also check that everything is properly documented. -->
 	<rule ref="WordPress-Docs"/>
@@ -69,7 +79,6 @@
 	https://github.com/WordPress/WordPress-Coding-Standards/wiki/Customizable-sniff-properties
 	-->
 	<config name="minimum_supported_wp_version" value="4.9"/>
-
 	<rule ref="WordPress.WP.I18n">
 		<properties>
 			<property name="text_domain" type="array">
@@ -82,9 +91,8 @@
 	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
 		<properties>
 			<property name="prefixes" type="array">
-				<element value="a-sticky-note"/>
+				<element value="a_sticky_note"/>
 			</property>
 		</properties>
 	</rule>
-
 </ruleset>

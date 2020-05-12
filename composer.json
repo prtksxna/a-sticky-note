@@ -18,7 +18,7 @@
     },
     "scripts": {
         "test": "composer run-script lint",
-        "lint": "phpcs **/*.php --ignore=vendor",
+        "lint": "phpcs *.php --ignore=vendor -s",
         "install-codestandards": [
             "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run"
         ],
