@@ -1,9 +1,9 @@
 .wp-block-sticky-note-sticky-note {
-  background: linear-gradient(#F9EFAF, #F7E98D);
-  box-shadow:0 4px 6px rgba(0,0,0,0.1);
+  background: linear-gradient(#f9efaf, #f7e98d);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 25px;
   transition: all ease 333ms;
-  font-family: 'Shadows Into Light Two', 'Chalkboard', 'Comic Sans MS', 'Comic Sans', cursive !important;
+  font-family: "Shadows Into Light Two", Chalkboard, "Comic Sans MS", "Comic Sans", cursive !important;
   font-size: 25px !important;
   border-radius: 3px;
   max-width: 300px;
@@ -13,56 +13,44 @@
 }
 
 .wp-block-sticky-note-sticky-note:hover {
-  box-shadow:0 8px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
   transform: rotate(1deg);
   transform: scale(1.01) rotate(1deg);
 }
 
 .wp-block-sticky-note-sticky-note.is-style-flat {
   position: relative;
-  background: #F6E8A5;
+  background: #f6e8a5;
   box-shadow: none;
   border-radius: 0;
-  border: 1px solid #E1DC89;
+  border: 1px solid #e1dc89;
 
   /* from https://css-tricks.com/notched-boxes/ */
-  clip-path: polygon(
-    0% 0%,
-    100% 0%,
-    100% calc(100% - 20px),
-    calc(100% - 20px) 100%,
-    0 100%
-  );
+  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
 }
 
 /* from https://designshack.net/articles/css/code-a-simple-folded-corner-effect-with-css/ */
-.wp-block-sticky-note-sticky-note.is-style-flat:before {
+.wp-block-sticky-note-sticky-note.is-style-flat::before {
   content: "";
   position: absolute;
   bottom: 0%;
   right: 0%;
-  width: 0px;
-  height: 0px;
+  width: 0;
+  height: 0;
   transition: all ease 333ms;
-  border-top: 20px solid #E1DC89;
-  border-right: 20px solid #E1DC89;
+  border-top: 20px solid #e1dc89;
+  border-right: 20px solid #e1dc89;
 }
 
 .wp-block-sticky-note-sticky-note.is-style-flat:hover {
-    box-shadow: none;
-    transform: none;
+  box-shadow: none;
+  transform: none;
 
-    clip-path: polygon(
-      0% 0%,
-      100% 0%,
-      100% calc(100% - 40px),
-      calc(100% - 40px) 100%,
-      0 100%
-    );
+  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%);
 }
 
-.wp-block-sticky-note-sticky-note.is-style-flat:hover:before {
-  border-top: 40px solid #E1DC89;
-  border-right: 40px solid #E1DC89;
+.wp-block-sticky-note-sticky-note.is-style-flat:hover::before {
+  border-top: 40px solid #e1dc89;
+  border-right: 40px solid #e1dc89;
 
 }
