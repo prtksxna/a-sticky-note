@@ -26,7 +26,7 @@ function a_sticky_note_block() {
     plugins_url( 'build/index.js', __FILE__ ),
     $asset_file['dependencies'],
     $asset_file['version'],
-    true,
+    true
   );
 
   wp_register_style(
