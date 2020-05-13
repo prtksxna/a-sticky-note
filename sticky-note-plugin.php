@@ -10,7 +10,7 @@
  * Plugin Name: A Sticky Note
  * Plugin URI: https://github.com/prtksxna/a-sticky-note
  * Description: Gutenberg block to add sticky notes to your blog posts.
- * Version: 1.1.3
+ * Version: 1.1.4
  * Requires at least: 5.2
  * Requires PHP: 7.2
  * Author: Prateek Saxena
