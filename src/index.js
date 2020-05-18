@@ -4,7 +4,11 @@ import {
 	RichText,
 	AlignmentToolbar,
 	BlockControls,
+	InspectorControls,
+	ColorPalette,
 } from '@wordpress/block-editor';
+import { PanelBody, PanelRow } from '@wordpress/components';
+import { __ } from '@wordpress/i18n';
 
 registerBlockType( 'sticky-note/sticky-note', {
 	title: 'Sticky note',
@@ -38,6 +42,10 @@ registerBlockType( 'sticky-note/sticky-note', {
 			type: 'string',
 			default: 'none',
 		},
+		color: {
+			type: 'string',
+			default: '#f9eeaa',
+		},
 	},
 	example: {
 		attributes: {
@@ -47,7 +55,7 @@ registerBlockType( 'sticky-note/sticky-note', {
 	},
 	edit( props ) {
 		const {
-			attributes: { content, alignment },
+			attributes: { content, alignment, color },
 			setAttributes,
 			className,
 		} = props;
@@ -62,6 +70,12 @@ registerBlockType( 'sticky-note/sticky-note', {
 			} );
 		};
 
+		const onChangeColor = ( newColor ) => {
+			props.setAttributes( {
+				color: newColor === undefined ? '#f9eeaa' : newColor,
+			} );
+		};
+
 		return (
 			<div>
 				{
@@ -72,10 +86,24 @@ registerBlockType( 'sticky-note/sticky-note', {
 						/>
 					</BlockControls>
 				}
+				{
+					<InspectorControls>
+						<PanelBody title={ __( 'Color' ) }>
+							<PanelRow>
+								<ColorPalette
+									disableCustomColors={ false }
+									value={ color }
+									onChange={ onChangeColor }
+									clearable={ true }
+								/>
+							</PanelRow>
+						</PanelBody>
+					</InspectorControls>
+				}
 				<RichText
 					tagName="p"
 					className={ className }
-					style={ { textAlign: alignment } }
+					style={ { textAlign: alignment, backgroundColor: color } }
 					onChange={ onChangeContent }
 					value={ content }
 				/>
@@ -86,6 +114,7 @@ registerBlockType( 'sticky-note/sticky-note', {
 		return (
 			<RichText.Content
 				className={ `sticky-note-${ props.attributes.alignment }` }
+				style={ { backgroundColor: props.attributes.color } }
 				tagName="p"
 				value={ props.attributes.content }
 			/>

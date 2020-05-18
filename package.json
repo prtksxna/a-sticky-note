@@ -5,7 +5,7 @@
   "main": "build/index.js",
   "scripts": {
     "start": "wp-scripts start",
-    "stylelint": "stylelint **/*.css",
+    "stylelint": "stylelint **/*.css --ignore-pattern vendor",
     "eslint": "eslint src/*.js",
     "test": "npm run stylelint && npm run eslint",
     "build": "wp-scripts build"

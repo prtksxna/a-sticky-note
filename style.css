@@ -1,5 +1,5 @@
 .wp-block-sticky-note-sticky-note {
-  background: linear-gradient(#f9efaf, #f7e98d);
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1));
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 25px;
   transition: all ease 333ms;
@@ -23,7 +23,7 @@
   background: #f6e8a5;
   box-shadow: none;
   border-radius: 0;
-  border: 1px solid #e1dc89;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 
   /* from https://css-tricks.com/notched-boxes/ */
   clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
@@ -38,8 +38,8 @@
   width: 0;
   height: 0;
   transition: all ease 333ms;
-  border-top: 20px solid #e1dc89;
-  border-right: 20px solid #e1dc89;
+  border-top: 20px solid rgba(0, 0, 0, 0.1);
+  border-right: 20px solid rgba(0, 0, 0, 0.1);
 }
 
 .wp-block-sticky-note-sticky-note.is-style-flat:hover {
@@ -50,7 +50,7 @@
 }
 
 .wp-block-sticky-note-sticky-note.is-style-flat:hover::before {
-  border-top: 40px solid #e1dc89;
-  border-right: 40px solid #e1dc89;
+  border-top: 40px solid rgba(0, 0, 0, 0.1);
+  border-right: 40px solid rgba(0, 0, 0, 0.1);
 
 }
