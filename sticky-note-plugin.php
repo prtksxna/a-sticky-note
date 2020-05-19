@@ -30,13 +30,6 @@ function a_sticky_note_block() {
   );
 
   wp_register_style(
-    'sticky-note-editor',
-    plugins_url( 'editor.css', __FILE__),
-    array( 'wp-edit-blocks' ),
-    filemtime( plugin_dir_path( __FILE__ ) . 'editor.css' )
-  );
-
-  wp_register_style(
     'sticky-note-style',
     plugins_url( 'style.css', __FILE__),
     array(),
@@ -49,7 +42,6 @@ function a_sticky_note_block() {
     'sticky-note/sticky-note',
     array(
         'style'         => 'sticky-note-style',
-        'editor_style'  => 'sticky-note-editor',
         'editor_script' => 'sticky-note',
     )
   );
