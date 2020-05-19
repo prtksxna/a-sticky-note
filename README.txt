@@ -17,3 +17,4 @@ A Gutenberg block to add sticky notes to your blog posts. Put sticky notes in be
 1. A sticky note
 2. A sticky note block in the editor
 3. Block selection dropdown
+4. Block settings
