@@ -129,10 +129,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('sti
     align: true,
     alignWide: false,
     reusable: false,
-    lightBlockWrapper: true,
-    __experimentalColor: {
-      gradients: true
-    }
+    lightBlockWrapper: true
   },
   attributes: {
     content: {
@@ -147,6 +144,10 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('sti
     color: {
       type: 'string',
       default: '#f9eeaa'
+    },
+    fontSize: {
+      type: 'number',
+      default: 16
     }
   },
   example: {
@@ -160,6 +161,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('sti
         content = _props$attributes.content,
         alignment = _props$attributes.alignment,
         color = _props$attributes.color,
+        fontSize = _props$attributes.fontSize,
         setAttributes = props.setAttributes,
         className = props.className;
 
@@ -181,6 +183,31 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('sti
       });
     };
 
+    var fontSizes = [{
+      name: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('Normal'),
+      slug: 'normal',
+      size: 16
+    }, {
+      name: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('Medium'),
+      slug: 'medium',
+      size: 20
+    }, {
+      name: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('Large'),
+      slug: 'large',
+      size: 36
+    }, {
+      name: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('Huge'),
+      slug: 'huge',
+      size: 48
+    }];
+    var fallbackFontSize = 20;
+
+    var onFontSizeChange = function onFontSizeChange(newFontSize) {
+      props.setAttributes({
+        fontSize: newFontSize === undefined ? fallbackFontSize : newFontSize
+      });
+    };
+
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["BlockControls"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["AlignmentToolbar"], {
       value: alignment,
       onChange: onChangeAlignment
@@ -191,12 +218,20 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('sti
       value: color,
       onChange: onChangeColor,
       clearable: true
+    }))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["PanelBody"], {
+      title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('Font size')
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["PanelRow"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["FontSizePicker"], {
+      fontSizes: fontSizes,
+      fallbackFontSize: fallbackFontSize,
+      value: fontSize,
+      onChange: onFontSizeChange
     })))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"], {
       tagName: "p",
       className: className,
       style: {
         textAlign: alignment,
-        backgroundColor: color
+        backgroundColor: color,
+        fontSize: fontSize
       },
       onChange: onChangeContent,
       value: content
@@ -206,6 +241,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('sti
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"].Content, {
       className: "sticky-note-".concat(props.attributes.alignment),
       style: {
+        fontSize: props.attributes.fontSize,
         backgroundColor: props.attributes.color
       },
       tagName: "p",

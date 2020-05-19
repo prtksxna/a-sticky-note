@@ -7,7 +7,7 @@ import {
 	InspectorControls,
 	ColorPalette,
 } from '@wordpress/block-editor';
-import { PanelBody, PanelRow } from '@wordpress/components';
+import { PanelBody, PanelRow, FontSizePicker } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
 registerBlockType( 'sticky-note/sticky-note', {
@@ -30,7 +30,6 @@ registerBlockType( 'sticky-note/sticky-note', {
 		alignWide: false,
 		reusable: false,
 		lightBlockWrapper: true,
-		__experimentalColor: { gradients: true },
 	},
 	attributes: {
 		content: {
@@ -46,6 +45,10 @@ registerBlockType( 'sticky-note/sticky-note', {
 			type: 'string',
 			default: '#f9eeaa',
 		},
+		fontSize: {
+			type: 'number',
+			default: 16,
+		},
 	},
 	example: {
 		attributes: {
@@ -55,7 +58,7 @@ registerBlockType( 'sticky-note/sticky-note', {
 	},
 	edit( props ) {
 		const {
-			attributes: { content, alignment, color },
+			attributes: { content, alignment, color, fontSize },
 			setAttributes,
 			className,
 		} = props;
@@ -73,6 +76,37 @@ registerBlockType( 'sticky-note/sticky-note', {
 		const onChangeColor = ( newColor ) => {
 			props.setAttributes( {
 				color: newColor === undefined ? '#f9eeaa' : newColor,
+			} );
+		};
+
+		const fontSizes = [
+			{
+				name: __( 'Normal' ),
+				slug: 'normal',
+				size: 16,
+			},
+			{
+				name: __( 'Medium' ),
+				slug: 'medium',
+				size: 20,
+			},
+			{
+				name: __( 'Large' ),
+				slug: 'large',
+				size: 36,
+			},
+			{
+				name: __( 'Huge' ),
+				slug: 'huge',
+				size: 48,
+			},
+		];
+		const fallbackFontSize = 20;
+
+		const onFontSizeChange = ( newFontSize ) => {
+			props.setAttributes( {
+				fontSize:
+					newFontSize === undefined ? fallbackFontSize : newFontSize,
 			} );
 		};
 
@@ -98,12 +132,26 @@ registerBlockType( 'sticky-note/sticky-note', {
 								/>
 							</PanelRow>
 						</PanelBody>
+						<PanelBody title={ __( 'Font size' ) }>
+							<PanelRow>
+								<FontSizePicker
+									fontSizes={ fontSizes }
+									fallbackFontSize={ fallbackFontSize }
+									value={ fontSize }
+									onChange={ onFontSizeChange }
+								/>
+							</PanelRow>
+						</PanelBody>
 					</InspectorControls>
 				}
 				<RichText
 					tagName="p"
 					className={ className }
-					style={ { textAlign: alignment, backgroundColor: color } }
+					style={ {
+						textAlign: alignment,
+						backgroundColor: color,
+						fontSize,
+					} }
 					onChange={ onChangeContent }
 					value={ content }
 				/>
@@ -114,7 +162,10 @@ registerBlockType( 'sticky-note/sticky-note', {
 		return (
 			<RichText.Content
 				className={ `sticky-note-${ props.attributes.alignment }` }
-				style={ { backgroundColor: props.attributes.color } }
+				style={ {
+					fontSize: props.attributes.fontSize,
+					backgroundColor: props.attributes.color,
+				} }
 				tagName="p"
 				value={ props.attributes.content }
 			/>
