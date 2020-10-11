@@ -29,7 +29,6 @@ registerBlockType( 'sticky-note/sticky-note', {
 		align: true,
 		alignWide: false,
 		reusable: false,
-		lightBlockWrapper: true,
 	},
 	attributes: {
 		content: {
