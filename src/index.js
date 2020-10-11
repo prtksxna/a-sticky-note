@@ -60,7 +60,6 @@ registerBlockType( 'sticky-note/sticky-note', {
 		const {
 			attributes: { content, alignment, color, fontSize },
 			setAttributes,
-			className,
 		} = props;
 
 		const onChangeContent = ( newContent ) => {
@@ -146,7 +145,7 @@ registerBlockType( 'sticky-note/sticky-note', {
 				}
 				<RichText
 					tagName="p"
-					className={ className }
+					className="wp-block-sticky-note-sticky-note"
 					style={ {
 						textAlign: alignment,
 						backgroundColor: color,

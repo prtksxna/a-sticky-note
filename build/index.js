@@ -162,8 +162,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('sti
         alignment = _props$attributes.alignment,
         color = _props$attributes.color,
         fontSize = _props$attributes.fontSize,
-        setAttributes = props.setAttributes,
-        className = props.className;
+        setAttributes = props.setAttributes;
 
     var onChangeContent = function onChangeContent(newContent) {
       setAttributes({
@@ -227,7 +226,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('sti
       onChange: onFontSizeChange
     })))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"], {
       tagName: "p",
-      className: className,
+      className: "wp-block-sticky-note-sticky-note",
       style: {
         textAlign: alignment,
         backgroundColor: color,
