@@ -2,7 +2,7 @@
 Contributors: prtksxna
 Tags: gutenberg, block, post it, sticky note
 Requires at least: 5.1
-Tested up to: 5.2
+Tested up to: 5.5
 Requires PHP: 7.2
 Stable tag: master
 License: GPLv2
